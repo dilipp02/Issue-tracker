@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Isuue Tracker</title>
+</head>
+<body onload="fetchIssues()">
+    <div class="container">
+        <h1>JS Issue Tracker</h1>
+        <div class="jumbotron">
+            <h4>Add New Issue:</h4>
+            <form class="add-issue">
+                <div class="form-group">
+                    <label for="desc" class="col-12 col-form-label">Description</label>
+                    <input type="text" class="form-control" name="desc" placeholder="Describe the issue ..." required>
+                </div>
+                <div class="form-group">
+                    <label for="severity" class="col-12 col-form-label">Severity</label>
+                    <select name="severity" id="severity" class="form-control">
+                        <option value="low" selected>Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="serious">Serious</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="assign" class="col-12 col-form-label">Assigned To</label>
+                    <input type="text" class="form-control" name="assign" placeholder="Enter Responsible ..." required>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary issue-button" type="submit">Add</button>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div id="activeIssues"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>   
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="http://chancejs.com/chance.min.js"></script>
+    <script src="https://kit.fontawesome.com/728a730df1.js" crossorigin="anonymous"></script>
+</body>
+</html>
